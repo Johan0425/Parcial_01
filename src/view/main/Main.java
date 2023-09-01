@@ -76,6 +76,7 @@ public class Main extends javax.swing.JFrame {
         lblPlatform = new javax.swing.JLabel();
         comboGenre = new javax.swing.JComboBox<>();
         txtDuration = new javax.swing.JFormattedTextField();
+        cleanTable = new javax.swing.JButton();
 
         popupMenu1.setLabel("popupMenu1");
 
@@ -118,7 +119,7 @@ public class Main extends javax.swing.JFrame {
         jScrollPane1.setViewportView(songTable);
 
         jDesktopPane1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(337, 55, 697, 448));
-        jDesktopPane1.add(txtSeach, new org.netbeans.lib.awtextra.AbsoluteConstraints(433, 8, 583, -1));
+        jDesktopPane1.add(txtSeach, new org.netbeans.lib.awtextra.AbsoluteConstraints(433, 8, 440, -1));
 
         lblCode.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         lblCode.setText("Buscar:");
@@ -193,6 +194,14 @@ public class Main extends javax.swing.JFrame {
             ex.printStackTrace();
         }
         jDesktopPane1.add(txtDuration, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 290, 160, -1));
+
+        cleanTable.setText("Limpiar tabla");
+        cleanTable.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cleanTableActionPerformed(evt);
+            }
+        });
+        jDesktopPane1.add(cleanTable, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 10, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -555,6 +564,10 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnUpdateActionPerformed
 
+    private void cleanTableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cleanTableActionPerformed
+        cleanTable();
+    }//GEN-LAST:event_cleanTableActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -594,6 +607,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnUpdate;
+    private javax.swing.JButton cleanTable;
     private javax.swing.JComboBox<String> comboGenre;
     private javax.swing.JComboBox<String> comboSelection;
     private javax.swing.JDesktopPane jDesktopPane1;
